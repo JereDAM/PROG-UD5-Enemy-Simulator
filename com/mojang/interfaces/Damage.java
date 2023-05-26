@@ -1,4 +1,4 @@
-package com.mojang.damage;
+package com.mojang.interfaces;
 
 public interface Damage {
     
