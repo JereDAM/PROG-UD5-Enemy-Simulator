@@ -1,5 +1,7 @@
+import java.util.Random;
 import java.util.Scanner;
 import com.mojang.character.Character;
+import com.mojang.mob.hostilemob.Enderman;
 import com.mojang.mob.pacificmob.Sheep;
 
 public class App {
@@ -8,6 +10,10 @@ public class App {
 
         Scanner keyboard = new Scanner(System.in);
 
+        int dead = 0;
+        int totalTurns = 0;
+        Random rngAction = new Random();
+        
         
         System.out.println("Bienvenido al asombroso mundo de maincrah, ahora Seleccione su arma");
         System.out.println("1. ninguna (1 de fuerza)");
@@ -23,12 +29,40 @@ public class App {
         System.out.println("4. De diamante (3 de defensa)");
         int armor = keyboard.nextInt();
 
+        
+
         Character Steve = new Character(armor, sword);
 
-        Sheep ovejita = new Sheep(5);
+        Enderman anEnderman = new Enderman(14);
+
+        while (dead < Steve.getHealth() || dead < anEnderman.getHealth()) {
+
+            anEnderman.getAttack(Steve.attack());
+
+            int randomAction = rngAction.nextInt(2);
+            switch (randomAction) {
+                case 0:
+                    Steve.getAttack(anEnderman.attack());
+                    break;
+            
+                case 1:
+                    anEnderman.move();
+                    break;
+                default:
+                    break;
+            }
+            totalTurns++;
+        }
         
 
 
+        System.out.println("El total de turnos ha sido: " + totalTurns);
+
+        if(Steve.getHealth() > 0 && anEnderman.getHealth()<= 0){
+            System.out.println("El ganador es Steve!!!");
+        }else{
+            System.out.println("Mi loco usted perdió xd");
+        }
         keyboard.close();
     }
 }
