@@ -26,6 +26,7 @@ public class App {
         Character Steve = new Character(armor, sword);
 
         Sheep ovejita = new Sheep(5);
+        
 
 
         keyboard.close();

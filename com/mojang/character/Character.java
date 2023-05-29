@@ -13,6 +13,10 @@ public class Character implements Combat{
         this.health = 12; 
     }
 
+    public int getHealth(){
+        return this.health;
+    }
+
     @Override
     public int attack(){
         return this.strength;
