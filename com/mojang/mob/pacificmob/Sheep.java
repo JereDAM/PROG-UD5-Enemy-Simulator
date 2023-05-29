@@ -11,6 +11,4 @@ public class Sheep extends PacificMob{
         System.out.println("AYUDAAAAAA *SOLLOZA* LLAMEN A LA POLICIAAA ME ESTÁN MATANDOOOOO *LLORA*");
     }
 
-    
-    
 }
