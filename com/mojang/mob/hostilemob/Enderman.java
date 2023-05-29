@@ -12,4 +12,11 @@ public class Enderman extends HostileMob{
         System.out.println("Se teletransportó detrás tuya!");
     }
     
+    public int getHealth(){
+        return this.mobHealth;
+    }
+
+    public int getmobStrength(){
+        return this.mobStrength;
+    }
 }

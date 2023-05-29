@@ -11,4 +11,12 @@ public class Zombie extends HostileMob{
     public void move() {
         System.out.println("Se acercó!");
     }
+
+    public int getHealth(){
+        return this.mobHealth;
+    }
+
+    public int getmobStrength(){
+        return this.mobStrength;
+    }
 }
