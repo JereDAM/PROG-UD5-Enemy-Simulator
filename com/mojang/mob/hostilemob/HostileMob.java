@@ -5,11 +5,12 @@ import com.mojang.mob.Mob;
 
 public abstract class HostileMob extends Mob implements Combat{
     
+    protected int mobStrength;
+    
     public HostileMob(int mobHealth) {
         super(mobHealth);
     }
 
-    protected int mobStrength;
     
     @Override
     public int attack(){
