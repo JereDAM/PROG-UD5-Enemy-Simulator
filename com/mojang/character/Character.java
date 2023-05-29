@@ -20,9 +20,9 @@ public class Character implements Combat{
 
     @Override
     public void getAttack(int attack){
-        int getDamage = attack() - this.defense;
-        int currentHealth = this.health - getDamage;
-        System.out.println("Daño recibido: " + getDamage);
+        attack = attack() - this.defense;
+        int currentHealth = this.health - attack;
+        System.out.println("Daño recibido: " + attack);
         System.out.println("Salud restante: " + currentHealth);
     }
 
