@@ -1,7 +1,7 @@
 package com.mojang.mob;
 
 public abstract class Mob {
-    private int mobHealth;
+    protected int mobHealth;
 
     public Mob(int mobHealth){
         this.mobHealth = mobHealth;
