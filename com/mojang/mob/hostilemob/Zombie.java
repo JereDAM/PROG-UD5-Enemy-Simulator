@@ -7,16 +7,25 @@ public class Zombie extends HostileMob{
         this.mobStrength = 4;
     }
     
-    @Override
-    public void move() {
-        System.out.println("Se acercó!");
+    
+    public void setHealth(int mobHealth){
+        this.mobHealth = mobHealth;
     }
-
+    
     public int getHealth(){
         return this.mobHealth;
     }
-
+    
+    public void mobStrength(int mobStrength){
+        this.mobStrength = mobStrength;
+    }
+    
     public int getmobStrength(){
         return this.mobStrength;
+    }
+    
+    @Override
+    public void move() {
+        System.out.println("Se acercó!");
     }
 }

@@ -12,7 +12,7 @@ public abstract class PacificMob extends Mob implements Damage{
     @Override
     public void getAttack(int attack){
         int currentHealth = this.mobHealth - attack;
-        System.out.println("Salud restante: " + currentHealth);
+        System.out.println("Salud restante del mob: " + currentHealth);
     }
 
 }

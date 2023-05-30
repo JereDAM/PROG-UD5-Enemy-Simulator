@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 import com.mojang.character.Character;
 import com.mojang.mob.hostilemob.Enderman;
-import com.mojang.mob.pacificmob.Sheep;
+
 
 public class App {
     public static void main(String[] args) throws Exception {

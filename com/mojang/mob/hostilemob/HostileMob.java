@@ -21,6 +21,6 @@ public abstract class HostileMob extends Mob implements Combat{
     public void getAttack(int attack){
         attack = attack();
         int currentHealth = this.mobHealth - attack;
-        System.out.println("Salud restante: " + currentHealth);
+        System.out.println("Salud restante del mob: " + currentHealth);
     }
 }
