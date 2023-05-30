@@ -7,7 +7,7 @@ public abstract class HostileMob extends Mob implements Combat{
     
     protected int mobStrength;
     
-    public HostileMob(int mobHealth) {
+    public HostileMob(int mobHealth, int mobStrength) {
         super(mobHealth);
     }
 
