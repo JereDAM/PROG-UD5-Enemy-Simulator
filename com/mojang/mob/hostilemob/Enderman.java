@@ -6,6 +6,10 @@ public class Enderman extends HostileMob{
         super(mobHealth, mobStrength);
     }
 
+    public int getHealth(){
+        return this.mobHealth;
+    }
+    
     @Override
     public void move() {
         System.out.println("Se teletransportó detrás tuya!");

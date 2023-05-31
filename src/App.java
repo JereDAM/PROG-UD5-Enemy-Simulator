@@ -2,6 +2,8 @@ import java.util.Random;
 import java.util.Scanner;
 import com.mojang.character.Character;
 import com.mojang.mob.hostilemob.Enderman;
+import com.mojang.mob.hostilemob.Zombie;
+import com.mojang.mob.pacificmob.Sheep;
 
 
 public class App {
@@ -33,23 +35,25 @@ public class App {
 
         Character Steve = new Character(armor, sword);
 
-        Enderman anEnderman = new Enderman(14);
+        Enderman anEnderman = new Enderman(14, 6);
+        Zombie aZombie = new Zombie(10, 4);
+        Sheep aSheep = new Sheep(5);
 
-        while (dead < Steve.getHealth() || dead < anEnderman.getHealth()) {
+        while (dead <= Steve.getHealth() && dead <= anEnderman.getHealth()) {
 
             anEnderman.getAttack(Steve.attack());
-
+            
             int randomAction = rngAction.nextInt(2);
             switch (randomAction) {
                 case 0:
-                    Steve.getAttack(anEnderman.attack());
-                    break;
-            
+                Steve.getAttack(anEnderman.attack());
+                break;
+                
                 case 1:
-                    anEnderman.move();
-                    break;
+                anEnderman.move();
+                break;
                 default:
-                    break;
+                break;
             }
             totalTurns++;
         }

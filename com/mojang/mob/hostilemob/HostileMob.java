@@ -9,6 +9,7 @@ public abstract class HostileMob extends Mob implements Combat{
     
     public HostileMob(int mobHealth, int mobStrength) {
         super(mobHealth);
+        this.mobStrength = mobStrength;
     }
 
     
@@ -19,8 +20,7 @@ public abstract class HostileMob extends Mob implements Combat{
 
     @Override
     public void getAttack(int attack){
-        attack = attack();
-        int currentHealth = this.mobHealth - attack;
-        System.out.println("Salud restante del mob: " + currentHealth);
+        this.mobHealth = this.mobHealth - attack;
+        System.out.println("Salud restante del mob: " + this.mobHealth);
     }
 }
